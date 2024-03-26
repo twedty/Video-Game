@@ -1,0 +1,13 @@
+First Steps:
+- Create a character
+- Create some background
+- Create some items and find out where to place them (also how to place them)
+    -(This step will take a longer time)
+    -Find 8 items to place
+    -Place items
+    -Organize where they should be located at
+- Create on:click on specific items (up to 4)
+- Specify what happens when the items have been clicked (what pops up? what's the text?)
+- Create the code for the safe
+    -What happens when it's correct?
+    -Incorrect?
