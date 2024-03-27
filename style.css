@@ -1,3 +1,85 @@
 body{
-    background-color: white;
+    background:url(./assets/wall.jpg) repeat-x, url(./assets/rug.jpg);
+}
+
+/* below are the images alphabetically */
+.items{
+    display:flex;
+}
+#chair{
+    position: absolute;
+    top: 10em;
+    left: 65em;
+    width: 12em;
+    height: 12em;
+}
+#character{
+    position: absolute;
+    top: 15em;
+    left: 40em;
+    height: 10em;
+    z-index: 1;
+}
+#coffee-table{
+    position: absolute;
+    top: 22em;
+    left: 10em;
+    width: 40em;
+    height: 15em;
+    z-index: 1;
+}
+#controller{
+    position: absolute;
+    top: 25em;
+    left: 15em;
+    height: 3em;
+    width: 3em;
+    z-index: 1;
+}
+#couch{
+    position: absolute;
+    top: 10em;
+    right: 30em;
+    width: 40em;
+    height: 12em;
+}
+#lamp{
+    position: absolute;
+    top: 8em;
+    left: 54em;
+    z-index: 1;
+}
+#remote{
+    position: absolute;
+    top: 25em;
+    left: 45em;
+    width: 1em;
+    height: 3em;
+    z-index: 1;
+}
+#safe{
+    position: absolute;
+    top: 25em;
+    left: 70em;
+    z-index: 1;
+}
+#stand{
+    position: absolute;
+    top: 30em;
+    left: 60em;
+    height: 10em;
+    width: 30em;
+}
+#table{
+    position: absolute;
+    top: 13em;
+    right: 18em;
+    height: 10em;
+    width: 10em;
+}
+#tv{
+    position: absolute;
+    top: 1em;
+    left: 30em;
+    width: 20em;
 }
