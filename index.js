@@ -1,65 +1,38 @@
-const character = document.getElementById('character')
-character.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'This is YOU. By you clicking you, you have now made this become way more complicated than you should have. You should be disappointed in yourself.'
+const elements = [
+    { id: 'character', text: 'This is YOU. By you clicking you, you have now made this become way more complicated than you should have. You should be disappointed in yourself.' },
+    { id: 'chair', text: 'A place that your sore butt can rest on and recover from a hard days work at your desk job typing on your computer, eating snacks, and using that big brain of yours...or if you are a laborer. Because in that case you actually deserve to sit here.' },
+    { id: 'coffee-table', text: 'This is something you can set drinks, food, and other items to hold for you at an elevated space in way that makes it easy to reach for with very little effort on your part.' },
+    { id: 'controller', text: 'A tongue licks a lollipop and a broken tooth requires a fix. John Wicks dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!' },
+    { id: 'couch', text: 'I am what makes a potato......a COUCH potato. And now that you have sat on me.....YOU ARE MINE!!!!' },
+    { id: 'lamp', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers are the same.' },
+    { id: 'remote', text: 'As a word with four letters I can mean one way or another. "No" in one way and in the other, a number.' },
+    { id: 'safe', text: 'Insert code combination here:' },
+    { id: 'stand', text: 'I hold something very valuable....and also very heavy. My four legs hurt. Please help.' },
+    { id: 'table', text: 'What has legs but cannot walk? A table. Or a chair....but in this case it is an actual table.' },
+    { id: 'tv', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?' }
+];
+
+elements.forEach(item => {
+    const element = document.getElementById(item.id);
+    element.addEventListener('click', function() {
+    const mainBox = document.getElementById('main-box');
+    mainBox.textContent = item.text;
+    })
 })
 
-const chair = document.getElementById('chair')
-chair.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'A place that you can sit on.'
-})
+//I had to look this up
+const mainBoxOriginalText = document.getElementById('main-box').textContent;
 
-const coffeeTable = document.getElementById('coffee-table')
-coffeeTable.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'This is something you can set drinks, food, and other items to hold for you at an elevated space.'
-})
+function resetMainBox() {
+    const mainBox = document.getElementById('main-box');
+    mainBox.textContent = mainBoxOriginalText;
+}
 
-const controller = document.getElementById('controller')
-controller.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'A tongue licks a lollipop and a broken tooth requires a fix. John Wicks dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!'
-})
+document.addEventListener('click', function(event) {
+    const clickedElementId = event.target.id;
+    if (!clickedElementId || !elements.some(item => item.id === clickedElementId)) {
+    resetMainBox();
+    }
+});
+//This is what I found
 
-const couch = document.getElementById('couch')
-couch.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'I am what makes a potato......a COUCH potato.'
-})
-
-const lamp = document.getElementById('lamp')
-lamp.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers are the same.'
-})
-
-const remote = document.getElementById('remote')
-remote.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'As a word with four letters I can mean one way or another. "No" in one way and in the other, a number.'
-})
-
-const safe = document.getElementById('safe')
-safe.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'Insert code combination here:'
-})
-
-const stand = document.getElementById('stand')
-stand.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'I hold something very valuable....'
-})
-
-const table = document.getElementById('table')
-table.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'What has legs but cannot walk? A table.'
-})
-
-const tv = document.getElementById('tv')
-tv.addEventListener('click', function() {
-    const element = document.getElementById("main-box")
-    element.textContent = 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?'
-})
