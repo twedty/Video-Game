@@ -3,6 +3,9 @@ body{
 }
 
 /* below are the images alphabetically */
+img:hover{
+    opacity: .6;
+}
 .items{
     display:flex;
 }
@@ -39,7 +42,7 @@ body{
 #couch{
     position: absolute;
     top: 10em;
-    right: 30em;
+    left: 10em;
     width: 40em;
     height: 12em;
 }
@@ -73,7 +76,7 @@ body{
 #table{
     position: absolute;
     top: 13em;
-    right: 18em;
+    left: 52em;
     height: 10em;
     width: 10em;
 }
@@ -82,4 +85,16 @@ body{
     top: 1em;
     left: 30em;
     width: 20em;
+}
+
+h1{
+    position:fixed;
+    top: 18em;
+    left: 10em;
+    background-color: gray;
+    z-index: 1;
+    margin: 100px;
+}
+p{
+    display:none
 }
