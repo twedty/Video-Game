@@ -11,3 +11,17 @@ First Steps:
 - Create the code for the safe
     -What happens when it's correct?
     -Incorrect?
+add button to refresh riddle
+
+    //create event listener listening for click and then in {make it so a div appears inside the div have an imput field with a button. Create another input listener for the button (onSubmit) and styling}
+
+function safeCombo() {
+    const inputCombo = document.getElementById('safecombo');
+    const correctCombo = '6093';
+
+    if (inputCombo === correctCombo) {
+        mainBox.textConent = 'You win'
+    } else {
+        mainBox.textContent = 'You lose'
+    }
+}
