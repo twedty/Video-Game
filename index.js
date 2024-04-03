@@ -3,7 +3,7 @@
 //     const element = document.getElementById("main-box")
 //     element.textContent = 'This is YOU. By you clicking you, you have now made this become way more complicated than you should have. Please stop.'
 // })
-const combinationLength = Math.floor(Math.random() * 3) + 2;
+const combinationLength = Math.floor(Math.random() * 3) + 2; //random number between 2-4.
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -34,16 +34,16 @@ const elements = [
 ];
 
 const riddles = [
-    {key: '0', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers are the same.', note: 'MULTIPLY,'},
-    {key: '1', text: '1st, 2nd and 3rd are medals of bronze, silver, and gold. What have you done if you are standing first with the medal you hold?', note: 'GOLD,'},
-    {key: '2', text: 'In one way I mean the word also, and in another I am going somewhere. What is the one thing that is missing which has the meaning of a number?', note: 'SOMETHING MISSING,'},
-    {key: '3', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?', note: 'ANIMALS,'},
-    {key: '4', text: 'A bank taking your house and a golfer telling you to watch out. What is one word that explains what this is all about?', note: 'MONEY,'},
-    {key: '5', text: 'Add me once and I am odd but add me again and I become even. I am the halfway to double digits creating "Steve" from "Steven."', note: 'MATH,'},
-    {key: '6', text: 'A tongue licks a lollipop and a broken tooth requires a fix. John Wicks dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!', note: 'JOHN WICK,'},
-    {key: '7', text: 'I am either the prime or the jackpot as long as the numbers are in line. A letter removed from "Steven" will tell you which one will be fine.', note: 'CASINO,'},
-    {key: '8', text: 'You may eat food as soon as it has been prepared and cooked. Yet, what is it called when you have already eaten the meal that you took?', note: 'FOOD,'},
-    {key: '9', text: 'As a word with four letters I can mean one way or another. "No" in one way and in the other, a number', note: 'NO,'},
+    {key: '0', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers are the same.', note: 'MULTIPLY,', hint: 'You need to make ALL the numbers the same no matter what.'},
+    {key: '1', text: '1st, 2nd and 3rd are medals of bronze, silver, and gold. What have you done if you are standing first with the medal you hold?', note: 'GOLD,', hint: 'If you finish last you have lost and if you finish first...'},
+    {key: '2', text: 'In one way I mean the word also, and in another I am going somewhere. What is the one thing that is missing which has the meaning of a number?', note: 'SOMETHING MISSING,', hint: 'But I want TO do something else TOO.'},
+    {key: '3', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?', note: 'ANIMALS,', hint: 'Look at the first sentence and find its common theme with the letters.'},
+    {key: '4', text: 'A bank taking your house and a golfer telling you to watch out. What is one word that explains what this is all about?', note: 'MONEY,', hint: 'Something to do with closure...'},
+    {key: '5', text: 'Add me once and I am odd but add me again and I become even. I am the halfway to double digits creating "Steve" from "Steven."', note: 'MATH,', hint: 'What is halfway to double digits?'},
+    {key: '6', text: 'A tongue licks a lollipop and a broken tooth requires a fix. John Wicks dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!', note: 'JOHN WICK,', hint: 'Key words here are: licks, fix, Wicks, and kicks.'},
+    {key: '7', text: 'I am either the prime or the jackpot as long as the numbers are in line. A letter removed from "Steven" will tell you which one will be fine.', note: 'CASINO,', hint: 'What letter removed will give you a number when its spelled out?'},
+    {key: '8', text: 'You may eat food as soon as it has been prepared and cooked. Yet, what is it called when you have already eaten the meal that you took?', note: 'FOOD,', hint: 'Cannot be eaten but something close to it...'},
+    {key: '9', text: 'As a word with four letters I can mean one way or another. "No" in one way and in the other, a number', note: 'NO,', hint: 'Think of the German language...'},
 ];
 
 const mainBox = document.getElementById('main-box');
@@ -70,18 +70,63 @@ elements.find(element => element.id === 'safe').text = safeCombination;
 const notesInOrder = safeCombination.split('').map(key => selectedRiddles.find(riddle => riddle.key === key).note);
 mainBoxOriginalText += ' ' + notesInOrder.join(' '); // Append the notes to the original text content
 
+let characterPosition = 0; // Initialize character position
+
 // Update text content of each element in the DOM
-elements.forEach(item => {
+elements.forEach((item, event) => {
     const element = document.getElementById(item.id);
     if (element) {
         element.textContent = item.text;
         element.addEventListener('click', function() {
+            moveCharacterToClick(event); // Move the character to the clicked element
             mainBox.textContent = item.text;
         });
     }
 });
 
-// Rest of your code remains unchanged
+// Function to populate the dropdown menu with hints
+function populateHintDropdown(selectedRiddles) {
+    const hintDropdown = document.getElementById('hint-dropdown');
+    hintDropdown.innerHTML = ''; // Clear previous options
+
+    selectedRiddles.forEach(riddle => {
+        const option = document.createElement('a');
+        option.textContent = `Hint ${riddle.note}: ${riddle.hint}`; // Display hint note and text
+        option.addEventListener('click', function(event) {
+        // Get hint text corresponding to the clicked riddle key
+        const hint = hintsArray.find(hint => hint.key === riddle.key);
+        mainBox.textContent = hint.text;
+        
+        // Hide the dropdown after hint selection
+        hintDropdown.style.display = 'none';
+        });
+    hintDropdown.appendChild(option);
+    });
+}
+
+  // Call the function to populate the dropdown menu with hints based on selected riddles
+populateHintDropdown(selectedRiddles);
+
+  // Event listener for question mark icon click
+document.getElementById('question-icon').addEventListener('click', function() {
+    const hintDropdown = document.getElementById('hint-dropdown');
+    // Toggle dropdown visibility
+    hintDropdown.style.display = hintDropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+// Function to move the character to exactly where it is being clicked
+function moveCharacterToClick(event) {
+    const characterElement = document.getElementById('character');
+    if (characterElement) {
+        const clickedX = event.clientX;
+        const clickedY = event.clientY;
+        characterElement.style.left = clickedX; // Set the left position of the character to the clicked X coordinate
+        characterElement.style.top = clickedY; // Set the top position of the character to the clicked Y coordinate
+    }
+}
+
+document.body.addEventListener('click', moveCharacterToClick);
+
 function safeCombo() {
     const combinationInput = prompt('Enter the combination:');
     if (combinationInput === safeCombination) {
@@ -99,3 +144,7 @@ document.addEventListener('click', function(event) {
         mainBox.textContent = mainBoxOriginalText;
     }
 });
+
+
+
+//to test for later
