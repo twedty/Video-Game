@@ -9,8 +9,11 @@ img:hover{
 .items{
     display:flex;
 }
-#question{
+#question-icon{
     position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 10em;
 }
 #chair{
     position: absolute;

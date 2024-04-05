@@ -34,13 +34,13 @@ const elements = [
 ];
 
 const riddles = [
-    {key: '0', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers become the same.', note: 'MULTIPLY,', hint: 'You need to make ALL the numbers the same no matter what.'},
+    {key: '0',text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and every number becomes the same.', note: 'MULTIPLY,', hint: 'There is only a single number that can make ALL numbers the same.'},
     {key: '1', text: '1st, 2nd and 3rd are medals of bronze, silver, and gold. What have you done if you are standing first with the medal you hold?', note: 'GOLD,', hint: 'If you finish last you have lost and if you finish first...'},
-    {key: '2', text: 'In one way I mean the word also, and in another I am going somewhere. What is the one thing that is missing which has the meaning of a number?', note: 'SOMETHING MISSING,', hint: 'But I want TO do something else TOO.'},
-    {key: '3', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?', note: 'ANIMALS,', hint: 'Look at the first sentence and find its common theme with the letters.'},
-    {key: '4', text: 'A bank taking your house and a golfer telling you to watch out. What is one word that explains what this is all about?', note: 'MONEY,', hint: 'Something to do with closure...'},
+    {key: '2', text: 'In one way I mean the word also, and in another I am going somewhere. What is the one thing that is missing which has the meaning of a number?', note: 'SOMETHING MISSING,', hint: 'There, they`re, their...'},
+    {key: '3', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?', note: 'ANIMALS,', hint: 'Look at the first sentence and find its common theme.'},
+    {key: '4', text: 'A bank claiming your house and a golfer telling you to watch out. What is one word that explains what this is all about?', note: 'MONEY,', hint: 'Something to do with closure...'},
     {key: '5', text: 'Add me once and I am odd but add me again and I become even. I am the halfway to double digits creating "Steve" from "Steven."', note: 'MATH,', hint: 'What is halfway to double digits?'},
-    {key: '6', text: 'A tongue licks a lollipop and a broken tooth requires a fix. John Wicks dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!', note: 'JOHN WICK,', hint: 'Key words here are: licks, fix, Wicks, and kicks.'},
+    {key: '6', text: 'A tongue licks a lollipop and a broken tooth requires a fix. John Wick`s dog was killed so he went on a rampage for kicks. One word with three letters rhymes with this theme so you better figure it out quick!', note: 'JOHN WICK,', hint: 'Key words here are: licks, fix, Wicks, and kicks.'},
     {key: '7', text: 'I am either the prime or the jackpot as long as the numbers are in line. A letter removed from "Steven" will tell you which one will be fine.', note: 'CASINO,', hint: 'What letter removed will give you a number when its spelled out?'},
     {key: '8', text: 'You may eat food as soon as it has been prepared and cooked. Yet, what is it called when you have already eaten the meal that you took?', note: 'FOOD,', hint: 'Cannot be eaten but something close to it...'},
     {key: '9', text: 'As a word with four letters I can mean one way or another. "No" in one way and in the other, a number', note: 'NO,', hint: 'Think of the German language...'},
