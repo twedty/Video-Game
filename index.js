@@ -34,7 +34,7 @@ const elements = [
 ];
 
 const riddles = [
-    {key: '0', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers are the same.', note: 'MULTIPLY,', hint: 'You need to make ALL the numbers the same no matter what.'},
+    {key: '0', text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and all the numbers become the same.', note: 'MULTIPLY,', hint: 'You need to make ALL the numbers the same no matter what.'},
     {key: '1', text: '1st, 2nd and 3rd are medals of bronze, silver, and gold. What have you done if you are standing first with the medal you hold?', note: 'GOLD,', hint: 'If you finish last you have lost and if you finish first...'},
     {key: '2', text: 'In one way I mean the word also, and in another I am going somewhere. What is the one thing that is missing which has the meaning of a number?', note: 'SOMETHING MISSING,', hint: 'But I want TO do something else TOO.'},
     {key: '3', text: 'The fox, the dog, and the cat ate one red bat. What is the one thing you can find in common with what you know of that fact?', note: 'ANIMALS,', hint: 'Look at the first sentence and find its common theme with the letters.'},
