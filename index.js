@@ -1,8 +1,3 @@
-// const character = document.getElementById('character')
-// character.addEventListener('click', function() {
-//     const element = document.getElementById("main-box")
-//     element.textContent = 'This is YOU. By you clicking you, you have now made this become way more complicated than you should have. Please stop.'
-// })
 const combinationLength = Math.floor(Math.random() * 3) + 2; //random number between 2-4.
 
 function shuffleArray(array) {
@@ -19,6 +14,7 @@ function selectRandomElements(array) {
     return shuffledArray.slice(0, combinationLength);
 }
 
+//Array of all the elements that first appear on the screen without randomization
 const elements = [
     { id: 'character', text: 'This is YOU. By you clicking you, you have now made this become way more complicated than you should have. You should be disappointed in yourself. (not a riddle)' },
     { id: 'chair', text: 'A place that your sore butt can rest on and recover from a hard days work at your desk job typing on your computer, eating snacks, and using that big brain of yours...or if you are a laborer. Because in that case you actually deserve to sit here. (not a riddle)' },
@@ -33,6 +29,7 @@ const elements = [
     { id: 'tv', text: 'Every single time you click me it is apparently way too fast. I turn off then on again but I can never seem to stay turned on....click harder? faster? longer? No idea how to quite turn me on yet. (not a riddle)'}
 ];
 
+//The list of riddles of which 2-4 may replace some of the element texts.
 const riddles = [
     {key: '0',text: 'I multiply like rabbits in ways that are insane. But multiply me in one way and every number becomes the same.', note: 'MULTIPLY,', hint: 'There is only a single number that can make ALL numbers the same.'},
     {key: '1', text: '1st, 2nd and 3rd are medals of bronze, silver, and gold. What have you done if you are standing first with the medal you hold?', note: 'GOLD,', hint: 'If you finish last you have lost and if you finish first...'},
@@ -47,7 +44,10 @@ const riddles = [
 ];
 
 const mainBox = document.getElementById('main-box');
-let mainBoxOriginalText = mainBox.textContent; // Store the original text content
+let mainBoxOriginalText = mainBox.textContent; // Store the original text content to use for later
+
+
+// Using a lot of const to be able to come back to them later. Just wanting to start off with what they do first.
 
 // Randomly select 2-4 riddles from the riddles array based on the combination length
 const selectedRiddles = selectRandomElements(riddles, combinationLength);
@@ -127,6 +127,7 @@ function moveCharacterToClick(event) {
 
 document.body.addEventListener('click', moveCharacterToClick);
 
+//Safe combination input to either true or false
 function safeCombo() {
     const combinationInput = prompt('Enter the combination:');
     if (combinationInput === safeCombination) {
@@ -144,7 +145,3 @@ document.addEventListener('click', function(event) {
         mainBox.textContent = mainBoxOriginalText;
     }
 });
-
-
-
-//to test for later
