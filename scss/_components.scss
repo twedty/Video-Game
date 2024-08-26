@@ -11,7 +11,7 @@
   }
   
   #character {
-    @include absolute-position(15em, 40em, $z-index-character);
+    @include absolute-position(15em, 40em, $z-index-high);
     transition: top 0.5s ease, left 0.5s ease;
     height: 10em;
   }
@@ -22,8 +22,7 @@
     height: 15em;
   }
   
-  #controller,
-  #remote {
+  #controller {
     @include absolute-position(25em, 15em);
     height: 3em;
     width: 3em;
@@ -37,6 +36,12 @@
   
   #lamp {
     @include absolute-position(8em, 54em);
+  }
+  
+  #remote {
+    @include absolute-position(25em, 45em);
+    width: 1em;
+    height: 3em;
   }
   
   #safe {

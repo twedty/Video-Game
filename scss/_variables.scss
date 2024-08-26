@@ -1,14 +1,14 @@
-// Colors
-$background-color: gray;
-$button-bg-color: black;
-$button-hover-bg-color: white;
-$text-color: white;
-$text-hover-color: black;
-
-// Image paths
+// Background image paths
 $wall-image: url(./assets/wall.jpg);
 $rug-image: url(./assets/rug.jpg);
 
-// Z-index
+// Colors
+$button-bg-color: black;
+$button-text-color: white;
+$button-hover-bg-color: white;
+$button-hover-text-color: black;
+
+// Z-index values
+$z-index-high: 4;
 $z-index-default: 1;
-$z-index-character: 4;
+

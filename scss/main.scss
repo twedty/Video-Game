@@ -1,17 +1,20 @@
-@import 'variables';
-@import 'mixins';
-@import 'layout';
-@import 'components';
-@import 'buttons';
-@import 'dropdown';
-
-// Additional global styles can go here
-h1 {
-  @include fixed-position(18em, 10em);
-  background-color: $background-color;
-  margin: 100px;
-}
-
-p {
-  display: none;
-}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: $z-index-default;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+  
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+  
