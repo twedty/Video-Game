@@ -1,0 +1,62 @@
+#question-icon {
+    @include absolute-position(10em, null);
+    height: 150px;
+    width: 150px;
+  }
+  
+  #chair {
+    @include absolute-position(10em, 65em);
+    width: 12em;
+    height: 12em;
+  }
+  
+  #character {
+    @include absolute-position(15em, 40em, $z-index-character);
+    transition: top 0.5s ease, left 0.5s ease;
+    height: 10em;
+  }
+  
+  #coffee-table {
+    @include absolute-position(22em, 10em);
+    width: 40em;
+    height: 15em;
+  }
+  
+  #controller,
+  #remote {
+    @include absolute-position(25em, 15em);
+    height: 3em;
+    width: 3em;
+  }
+  
+  #couch {
+    @include absolute-position(10em, 10em);
+    width: 40em;
+    height: 12em;
+  }
+  
+  #lamp {
+    @include absolute-position(8em, 54em);
+  }
+  
+  #safe {
+    @include absolute-position(25em, 70em);
+  }
+  
+  #stand {
+    @include absolute-position(30em, 60em);
+    height: 10em;
+    width: 30em;
+  }
+  
+  #table {
+    @include absolute-position(13em, 52em);
+    height: 10em;
+    width: 10em;
+  }
+  
+  #tv {
+    @include absolute-position(1em, 30em);
+    width: 20em;
+  }
+  

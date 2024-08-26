@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+@import 'layout';
+@import 'components';
+@import 'buttons';
+@import 'dropdown';
+
+// Additional global styles can go here
+h1 {
+  @include fixed-position(18em, 10em);
+  background-color: $background-color;
+  margin: 100px;
+}
+
+p {
+  display: none;
+}

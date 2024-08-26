@@ -1,0 +1,152 @@
+body {
+  background: url(./assets/wall.jpg) repeat-x, url(./assets/rug.jpg);
+}
+
+.items {
+  display: flex;
+}
+
+img:hover {
+  opacity: 0.6;
+}
+
+#question-icon {
+  position: absolute;
+  top: 10em;
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+}
+
+#chair {
+  position: absolute;
+  top: 10em;
+  left: 65em;
+  z-index: 1;
+  width: 12em;
+  height: 12em;
+}
+
+#character {
+  position: absolute;
+  top: 15em;
+  left: 40em;
+  z-index: 4;
+  transition: top 0.5s ease, left 0.5s ease;
+  height: 10em;
+}
+
+#coffee-table {
+  position: absolute;
+  top: 22em;
+  left: 10em;
+  z-index: 1;
+  width: 40em;
+  height: 15em;
+}
+
+#controller,
+#remote {
+  position: absolute;
+  top: 25em;
+  left: 15em;
+  z-index: 1;
+  height: 3em;
+  width: 3em;
+}
+
+#couch {
+  position: absolute;
+  top: 10em;
+  left: 10em;
+  z-index: 1;
+  width: 40em;
+  height: 12em;
+}
+
+#lamp {
+  position: absolute;
+  top: 8em;
+  left: 54em;
+  z-index: 1;
+}
+
+#safe {
+  position: absolute;
+  top: 25em;
+  left: 70em;
+  z-index: 1;
+}
+
+#stand {
+  position: absolute;
+  top: 30em;
+  left: 60em;
+  z-index: 1;
+  height: 10em;
+  width: 30em;
+}
+
+#table {
+  position: absolute;
+  top: 13em;
+  left: 52em;
+  z-index: 1;
+  height: 10em;
+  width: 10em;
+}
+
+#tv {
+  position: absolute;
+  top: 1em;
+  left: 30em;
+  z-index: 1;
+  width: 20em;
+}
+
+button {
+  position: fixed;
+  left: 35em;
+  background-color: black;
+  color: white;
+  height: 200px;
+  width: 400px;
+  font-size: 40px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+}
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+h1 {
+  position: fixed;
+  top: 18em;
+  left: 10em;
+  background-color: gray;
+  margin: 100px;
+}
+
+p {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+body {
+    background: $wall-image repeat-x, $rug-image;
+  }
+  
+  .items {
+    display: flex;
+  }
+  
+  img:hover {
+    opacity: 0.6;
+  }
+  

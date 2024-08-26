@@ -1,0 +1,11 @@
+button {
+    @include fixed-position(null, 35em);
+    background-color: $button-bg-color;
+    color: $text-color;
+    height: 200px;
+    width: 400px;
+    font-size: 40px;
+  
+    @include hover-effect($button-hover-bg-color, $text-hover-color);
+  }
+  

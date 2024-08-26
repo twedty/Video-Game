@@ -1,0 +1,23 @@
+// Mixin for absolute positioning
+@mixin absolute-position($top, $left, $z-index: $z-index-default) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    z-index: $z-index;
+  }
+  
+  // Mixin for fixed positioning
+  @mixin fixed-position($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+  }
+  
+  // Mixin for hover effects
+  @mixin hover-effect($bg-color, $text-color) {
+    &:hover {
+      background-color: $bg-color;
+      color: $text-color;
+    }
+  }
+  
