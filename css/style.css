@@ -29,7 +29,7 @@ img:hover {
   position: absolute;
   top: 15em;
   left: 40em;
-  width: 10em;
+  width: 6em;
   transition: top 0.5s ease, left 0.5s ease;
   z-index: 4;
 }
@@ -109,8 +109,7 @@ img:hover {
 h1 {
   position: fixed;
   top: 18em;
-  left: 10em;
-  background-color: gray;
+  background-color: #808080;
   z-index: 1;
   margin: 100px;
 }
@@ -118,15 +117,15 @@ h1 {
 button {
   position: fixed;
   left: 35em;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   height: 200px;
   width: 400px;
   font-size: 40px;
 }
 button:hover {
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
 }
 
 p {

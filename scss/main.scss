@@ -25,7 +25,7 @@ img {
 
 #character {
     @include position-absolute(15em, 40em);
-    @include size(10em);
+    @include size(6em);
     transition: top 0.5s ease, left 0.5s ease;
     z-index: 4;
 }
@@ -81,7 +81,6 @@ img {
 h1 {
     position: fixed;
     top: 18em;
-    left: 10em;
     background-color: $gray-color;
     z-index: 1;
     margin: 100px;
