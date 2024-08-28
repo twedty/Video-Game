@@ -1,0 +1,22 @@
+@mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin size($width: null, $height: null) {
+    width: $width;
+    height: $height;
+}
+
+@mixin z-index($index) {
+    z-index: $index;
+}
+
+@mixin hover-effect {
+    &:hover {
+        opacity: $hover-opacity;
+    }
+}

@@ -1,0 +1,154 @@
+body {
+  background: url("../assets/wall.jpg") repeat-x, url("../assets/rug.jpg");
+}
+
+img:hover {
+  opacity: 0.6;
+}
+
+.items {
+  display: flex;
+}
+
+#question-icon {
+  position: absolute;
+  top: 10em;
+  width: 150px;
+  height: 150px;
+}
+
+#chair {
+  position: absolute;
+  top: 10em;
+  left: 65em;
+  width: 12em;
+  height: 12em;
+}
+
+#character {
+  position: absolute;
+  top: 15em;
+  left: 40em;
+  width: 10em;
+  transition: top 0.5s ease, left 0.5s ease;
+  z-index: 4;
+}
+
+#coffee-table {
+  position: absolute;
+  top: 22em;
+  left: 10em;
+  width: 40em;
+  height: 15em;
+  z-index: 1;
+}
+
+#controller {
+  position: absolute;
+  top: 25em;
+  left: 15em;
+  width: 3em;
+  height: 3em;
+  z-index: 1;
+}
+
+#couch {
+  position: absolute;
+  top: 10em;
+  left: 10em;
+  width: 40em;
+  height: 12em;
+}
+
+#lamp {
+  position: absolute;
+  top: 8em;
+  left: 54em;
+  z-index: 1;
+}
+
+#remote {
+  position: absolute;
+  top: 25em;
+  left: 45em;
+  width: 1em;
+  height: 3em;
+  z-index: 1;
+}
+
+#safe {
+  position: absolute;
+  top: 25em;
+  left: 70em;
+  z-index: 1;
+}
+
+#stand {
+  position: absolute;
+  top: 30em;
+  left: 60em;
+  width: 30em;
+  height: 10em;
+}
+
+#table {
+  position: absolute;
+  top: 13em;
+  left: 52em;
+  width: 10em;
+  height: 10em;
+}
+
+#tv {
+  position: absolute;
+  top: 1em;
+  left: 30em;
+  width: 20em;
+}
+
+h1 {
+  position: fixed;
+  top: 18em;
+  left: 10em;
+  background-color: gray;
+  z-index: 1;
+  margin: 100px;
+}
+
+button {
+  position: fixed;
+  left: 35em;
+  background-color: black;
+  color: white;
+  height: 200px;
+  width: 400px;
+  font-size: 40px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+p {
+  display: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+}
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/*# sourceMappingURL=style.css.map */

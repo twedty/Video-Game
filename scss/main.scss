@@ -1,0 +1,127 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    background: url('../assets/wall.jpg') repeat-x, url('../assets/rug.jpg');
+}
+
+img {
+    @include hover-effect;
+}
+
+.items {
+    display: flex;
+}
+
+#question-icon {
+    @include position-absolute(10em);
+    @include size(150px, 150px);
+    }
+
+#chair {
+    @include position-absolute(10em, 65em);
+    @include size(12em, 12em);
+}
+
+#character {
+    @include position-absolute(15em, 40em);
+    @include size(10em);
+    transition: top 0.5s ease, left 0.5s ease;
+    z-index: 4;
+}
+
+#coffee-table {
+    @include position-absolute(22em, 10em);
+    @include size(40em, 15em);
+    @include z-index(1);
+}
+
+#controller {
+    @include position-absolute(25em, 15em);
+    @include size(3em, 3em);
+    @include z-index(1);
+}
+
+#couch {
+    @include position-absolute(10em, 10em);
+    @include size(40em, 12em);
+}
+
+#lamp {
+    @include position-absolute(8em, 54em);
+    @include z-index(1);
+}
+
+#remote {
+    @include position-absolute(25em, 45em);
+    @include size(1em, 3em);
+    @include z-index(1);
+}
+
+#safe {
+    @include position-absolute(25em, 70em);
+    @include z-index(1);
+}
+
+#stand {
+    @include position-absolute(30em, 60em);
+    @include size(30em, 10em);
+}
+
+#table {
+    @include position-absolute(13em, 52em);
+    @include size(10em, 10em);
+}
+
+#tv {
+    @include position-absolute(1em, 30em);
+    @include size(20em);
+}
+
+h1 {
+    position: fixed;
+    top: 18em;
+    left: 10em;
+    background-color: $gray-color;
+    z-index: 1;
+    margin: 100px;
+}
+
+button {
+    position: fixed;
+    left: 35em;
+    background-color: $black-color;
+    color: $white-color;
+    height: 200px;
+    width: 400px;
+    font-size: 40px;
+
+    &:hover {
+        background-color: $white-color;
+        color: $black-color;
+    }
+}
+
+p {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+        display: block;
+        padding: 12px 16px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+}
