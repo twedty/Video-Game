@@ -1,0 +1,9 @@
+- added detailed readme.md files
+- wanted to test a few things out
+- tested out a bunch of new stuff and reworked my entire scss...also realized that the reason it wasn't working was because I forgot to link it correctly -_-
+- testing something else out
+- testing it out again
+- added scss
+- grammar issue
+- changed some grammer
+- added better text for the mainbox

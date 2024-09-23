@@ -58,3 +58,10 @@ To contribute to this project:
   - None
 
 
+# HOW TO PLAY
+
+- Your character is movable once you click anywhere on the screen. Once you click somewhere, your character will move there too. The object of the game is to figure out what the riddles are.
+- Clicking away from any object will tell you the *code* on how to unlock the safe. You must click ON the objects to figure out where the riddles are located and then figure out how the riddle matches with the code.
+- On the right of the screen there is a table with a safe. Match the numbers with the code that was previously stated. You will get two different prompts depending on if you've won or lost.
+- You can always refresh the page to try different combinations as every time it is reloaded the code is changed and the location of each riddle is also changed.
+- Good luck!
